@@ -1,205 +1,47 @@
 import { Link } from "react-router-dom";
-import { ArrowRight } from "lucide-react";
-import { collections } from "@/data/products";
 
 export const Footer = () => {
   return (
     <footer className="bg-foreground text-background">
-      {/* Top bar */}
-      <div className="border-b border-background/10">
-        <div className="container-full py-12 md:py-16">
-          <div className="flex flex-col md:flex-row md:items-end justify-between gap-8">
-            <div>
-              <Link
-                to="/"
-                className="font-serif text-3xl md:text-4xl tracking-tight text-background"
-              >
-                Stationery City
-              </Link>
-              <p className="mt-3 text-sm text-background/50 leading-relaxed max-w-xs">
-                Bulawayo's home for pens, paper and everything in between.
-              </p>
-            </div>
-
-            {/* Newsletter in footer */}
-            <div className="max-w-sm w-full">
-              <p className="text-[10px] font-semibold tracking-[0.3em] uppercase text-background/40 mb-3">
-                Stay Connected
-              </p>
-              <form className="flex gap-0">
-                <input
-                  type="email"
-                  placeholder="Your email"
-                  className="flex-1 h-12 px-4 text-sm bg-background/5 border border-background/15 text-background placeholder:text-background/30 focus:outline-none focus:border-background/40 transition-colors"
-                />
-                <button
-                  type="submit"
-                  className="h-12 px-5 text-sm font-medium bg-background text-foreground hover:bg-background/90 transition-colors"
-                >
-                  <ArrowRight className="w-4 h-4" />
-                </button>
-              </form>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Main footer content */}
-      <div className="container-full py-12 md:py-16">
+      <div className="container-full py-14 md:py-20">
         <div className="grid gap-10 md:grid-cols-4">
-          {/* Collections */}
+          <div className="md:col-span-2">
+            <Link to="/" className="font-serif text-3xl md:text-4xl tracking-tight text-background">
+              Stationery City
+            </Link>
+            <p className="mt-3 font-mono text-[10px] tracking-[0.3em] uppercase text-background/40">
+              Bulawayo · ZW
+            </p>
+            <p className="mt-6 text-sm text-background/60 leading-relaxed max-w-sm">
+              Shop R4 Main Street Mall, Between 14th And 15th Ave,<br />
+              J. Nkomo Street, Bulawayo
+            </p>
+          </div>
+
           <div>
-            <h4 className="text-[11px] font-semibold tracking-[0.25em] uppercase text-background/40 mb-5">
-              Collections
-            </h4>
-            <ul className="space-y-3">
-              {collections.slice(0, 6).map((collection) => (
-                <li key={collection.id}>
-                  <Link
-                    to={`/products?collection=${collection.slug}`}
-                    className="text-sm text-background/60 hover:text-background transition-colors duration-300"
-                  >
-                    {collection.name}
-                  </Link>
-                </li>
-              ))}
+            <h4 className="text-[11px] font-semibold tracking-[0.25em] uppercase text-background/40 mb-5">Explore</h4>
+            <ul className="space-y-3 text-sm">
+              <li><Link to="/" className="text-background/60 hover:text-background transition-colors">Home</Link></li>
+              <li><Link to="/products" className="text-background/60 hover:text-background transition-colors">Shop</Link></li>
+              <li><Link to="/about" className="text-background/60 hover:text-background transition-colors">About</Link></li>
+              <li><a href="#" className="text-background/60 hover:text-background transition-colors">Returns</a></li>
             </ul>
           </div>
 
-          {/* Explore */}
           <div>
-            <h4 className="text-[11px] font-semibold tracking-[0.25em] uppercase text-background/40 mb-5">
-              Explore
-            </h4>
-            <ul className="space-y-3">
-              <li>
-                <Link
-                  to="/products"
-                  className="text-sm text-background/60 hover:text-background transition-colors duration-300"
-                >
-                  Shop All
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/about"
-                  className="text-sm text-background/60 hover:text-background transition-colors duration-300"
-                >
-                  Our Story
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/cart"
-                  className="text-sm text-background/60 hover:text-background transition-colors duration-300"
-                >
-                  Shopping Bag
-                </Link>
-              </li>
-            </ul>
-          </div>
-
-          {/* Support */}
-          <div>
-            <h4 className="text-[11px] font-semibold tracking-[0.25em] uppercase text-background/40 mb-5">
-              Support
-            </h4>
-            <ul className="space-y-3">
-              <li>
-                <a
-                  href="#"
-                  className="text-sm text-background/60 hover:text-background transition-colors duration-300"
-                >
-                  Shipping & Returns
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="text-sm text-background/60 hover:text-background transition-colors duration-300"
-                >
-                  Care Guide
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="text-sm text-background/60 hover:text-background transition-colors duration-300"
-                >
-                  FAQ
-                </a>
-              </li>
-            </ul>
-          </div>
-
-          {/* Contact */}
-          <div>
-            <h4 className="text-[11px] font-semibold tracking-[0.25em] uppercase text-background/40 mb-5">
-              Contact
-            </h4>
-            <ul className="space-y-3">
-              <li>
-                <a
-                  href="mailto:stationerycitybyo@gmail.com"
-                  className="text-sm text-background/60 hover:text-background transition-colors duration-300"
-                >
-                  stationerycitybyo@gmail.com
-                </a>
-              </li>
-              <li>
-                <a
-                  href="tel:+263774098174"
-                  className="text-sm text-background/60 hover:text-background transition-colors duration-300"
-                >
-                  +263 77 409 8174
-                </a>
-              </li>
-              <li>
-                <a
-                  href="tel:+263775863002"
-                  className="text-sm text-background/60 hover:text-background transition-colors duration-300"
-                >
-                  +263 77 586 3002
-                </a>
-              </li>
-              <li>
-                <p className="text-sm text-background/40 leading-relaxed">
-                  Shop R4, Main Street Mall<br />
-                  Between 14th &amp; 15th Ave<br />
-                  J. Nkomo Street, Bulawayo
-                </p>
-              </li>
+            <h4 className="text-[11px] font-semibold tracking-[0.25em] uppercase text-background/40 mb-5">Contact</h4>
+            <ul className="space-y-3 text-sm">
+              <li><a href="tel:+263774098174" className="font-mono text-background/60 hover:text-background transition-colors">+263 77 409 8174</a></li>
+              <li><a href="tel:+263775863002" className="font-mono text-background/60 hover:text-background transition-colors">+263 77 586 3002</a></li>
+              <li><a href="mailto:stationerycitybyo@gmail.com" className="text-background/60 hover:text-background transition-colors break-all">stationerycitybyo@gmail.com</a></li>
             </ul>
           </div>
         </div>
       </div>
-
-      {/* Bottom bar */}
       <div className="border-t border-background/10">
-        <div className="container-full py-6 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-xs text-background/30">
-            © {new Date().getFullYear()} Stationery City Bulawayo. All rights reserved.
-          </p>
-          <div className="flex gap-8">
-            <a
-              href="#"
-              className="text-xs text-background/30 hover:text-background/60 transition-colors duration-300"
-            >
-              Privacy Policy
-            </a>
-            <a
-              href="#"
-              className="text-xs text-background/30 hover:text-background/60 transition-colors duration-300"
-            >
-              Terms of Service
-            </a>
-            <a
-              href="#"
-              className="text-xs text-background/30 hover:text-background/60 transition-colors duration-300"
-            >
-              Cookie Policy
-            </a>
-          </div>
+        <div className="container-full py-6 flex flex-col md:flex-row justify-between items-center gap-3">
+          <p className="text-xs text-background/40">© 2025 Stationery City. All rights reserved.</p>
+          <Link to="/admin/login" className="text-[10px] tracking-[0.25em] uppercase text-background/30 hover:text-background/70">Staff</Link>
         </div>
       </div>
     </footer>
