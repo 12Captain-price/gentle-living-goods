@@ -14,10 +14,10 @@ export const Footer = () => {
                 to="/"
                 className="font-serif text-3xl md:text-4xl tracking-tight text-background"
               >
-                Maison
+                Stationery City
               </Link>
               <p className="mt-3 text-sm text-background/50 leading-relaxed max-w-xs">
-                Curated home objects and lifestyle pieces for considered living.
+                Bulawayo's home for pens, paper and everything in between.
               </p>
             </div>
 
@@ -140,15 +140,33 @@ export const Footer = () => {
             <ul className="space-y-3">
               <li>
                 <a
-                  href="mailto:hello@maison.com"
+                  href="mailto:stationerycitybyo@gmail.com"
                   className="text-sm text-background/60 hover:text-background transition-colors duration-300"
                 >
-                  hello@maison.com
+                  stationerycitybyo@gmail.com
+                </a>
+              </li>
+              <li>
+                <a
+                  href="tel:+263774098174"
+                  className="text-sm text-background/60 hover:text-background transition-colors duration-300"
+                >
+                  +263 77 409 8174
+                </a>
+              </li>
+              <li>
+                <a
+                  href="tel:+263775863002"
+                  className="text-sm text-background/60 hover:text-background transition-colors duration-300"
+                >
+                  +263 77 586 3002
                 </a>
               </li>
               <li>
                 <p className="text-sm text-background/40 leading-relaxed">
-                  Mon–Fri, 9am–6pm CET
+                  Shop R4, Main Street Mall<br />
+                  Between 14th &amp; 15th Ave<br />
+                  J. Nkomo Street, Bulawayo
                 </p>
               </li>
             </ul>
@@ -160,7 +178,7 @@ export const Footer = () => {
       <div className="border-t border-background/10">
         <div className="container-full py-6 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-xs text-background/30">
-            © {new Date().getFullYear()} Maison. All rights reserved.
+            © {new Date().getFullYear()} Stationery City Bulawayo. All rights reserved.
           </p>
           <div className="flex gap-8">
             <a

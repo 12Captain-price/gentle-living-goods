@@ -19,8 +19,8 @@ const About = () => {
       <section ref={heroRef} className="relative h-[80vh] md:h-screen overflow-hidden">
         <motion.div className="absolute inset-0" style={{ y: heroImageY }}>
           <img
-            src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=1920&q=80"
-            alt="Artisan workshop"
+            src="https://images.unsplash.com/photo-1497215728101-856f4ea42174?w=1920&q=80"
+            alt="Stationery City shop interior"
             className="w-full h-[120%] object-cover"
           />
           <div className="absolute inset-0 bg-gradient-to-b from-charcoal/20 via-charcoal/10 to-charcoal/50" />
@@ -36,13 +36,13 @@ const About = () => {
               Our Story
             </p>
             <h1 className="font-serif text-5xl md:text-7xl lg:text-8xl text-white mb-6 leading-[0.9]">
-              Curating Beauty
+              Bulawayo's
               <br />
-              <span className="italic font-normal">for Living</span>
+              <span className="italic font-normal">Stationery Home</span>
             </h1>
             <p className="text-base md:text-lg text-white/70 max-w-lg leading-relaxed">
-              Objects made with care, materials that age gracefully,
-              and spaces that invite pause.
+              Trusted pens, notebooks and office essentials — stocked with care
+              at Shop R4, Main Street Mall.
             </p>
           </motion.div>
         </div>
@@ -64,9 +64,9 @@ const About = () => {
               </span>
             </div>
             <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl text-foreground leading-[1.25] tracking-tight">
-              We believe that the objects we surround ourselves with should tell
-              stories, age beautifully, and bring quiet{" "}
-              <span className="italic">joy</span> to everyday moments.
+              We believe the right pen, the right notebook and the right file can
+              make school easier, work sharper and ideas travel{" "}
+              <span className="italic">further</span>.
             </h2>
           </motion.div>
         </div>
@@ -88,21 +88,22 @@ const About = () => {
                 The Beginning
               </p>
               <h3 className="font-serif text-3xl md:text-4xl text-foreground mb-8 leading-tight">
-                A Personal Quest
+                A Shop Built for
                 <br />
-                <span className="italic">for Meaning</span>
+                <span className="italic">Bulawayo</span>
               </h3>
               <p className="text-muted-foreground leading-[1.8] mb-5">
-                Maison began as a personal quest—a search for objects that felt
-                meaningful in an age of disposable everything. After years of
-                collecting and curating, we opened our doors to share these
-                discoveries with others who value craftsmanship over convenience.
+                Stationery City opened its doors in the heart of Bulawayo's CBD
+                to solve a simple problem: making trusted, quality stationery
+                easy to find at fair prices. From a single counter in Main
+                Street Mall, we've grown into a go-to shop for students,
+                teachers, offices and small businesses across the city.
               </p>
               <p className="text-muted-foreground leading-[1.8]">
-                What started as a small collection has grown into a carefully
-                edited selection of home goods and lifestyle pieces, each chosen
-                for its ability to bring warmth, texture, and intention to the
-                spaces we inhabit.
+                Today our shelves carry everything from the humble BIC pen to
+                full geometry sets, hardcover counter books, art supplies and
+                reams of A4 paper — the everyday tools that keep classrooms,
+                offices and workshops running.
               </p>
             </motion.div>
             <motion.div
@@ -114,8 +115,8 @@ const About = () => {
             >
               <div className="aspect-[4/5] overflow-hidden group">
                 <img
-                  src="https://images.unsplash.com/photo-1493663284031-b7e3aefcae8e?w=1200&q=80"
-                  alt="Living space"
+                  src="https://images.unsplash.com/photo-1568234928966-359c35dd8327?w=1200&q=80"
+                  alt="Neatly organised stationery on shop shelves"
                   className="w-full h-full object-cover transition-transform duration-[1.5s] ease-out group-hover:scale-105"
                 />
               </div>
@@ -132,8 +133,8 @@ const About = () => {
           >
             <div className="relative h-[50vh] md:h-[70vh] overflow-hidden group">
               <img
-                src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=1920&q=80"
-                alt="Workshop detail"
+                src="https://images.unsplash.com/photo-1531346878377-a5be20888e57?w=1920&q=80"
+                alt="An open notebook and pen"
                 className="w-full h-full object-cover transition-transform duration-[2s] ease-out group-hover:scale-105"
               />
               <div className="absolute inset-0 bg-charcoal/20" />
@@ -145,11 +146,11 @@ const About = () => {
                   transition={{ duration: 0.8, delay: 0.3 }}
                   className="font-serif text-3xl md:text-5xl lg:text-6xl text-white text-center max-w-3xl px-6 leading-tight"
                 >
-                  "Beauty lies in the
+                  "Great ideas
                   <br />
-                  <span className="italic">imperfection</span>
+                  <span className="italic">start on paper</span>
                   <br />
-                  of things made by hand"
+                  and end in action"
                 </motion.p>
               </div>
             </div>
@@ -166,8 +167,8 @@ const About = () => {
             >
               <div className="aspect-[4/5] overflow-hidden group">
                 <img
-                  src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1200&q=80"
-                  alt="Artisan hands at work"
+                  src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=1200&q=80"
+                  alt="Students preparing for school"
                   className="w-full h-full object-cover transition-transform duration-[1.5s] ease-out group-hover:scale-105"
                 />
               </div>
@@ -183,21 +184,20 @@ const About = () => {
                 Our Approach
               </p>
               <h3 className="font-serif text-3xl md:text-4xl text-foreground mb-8 leading-tight">
-                From Workshop
+                From Our Counter
                 <br />
-                <span className="italic">to Home</span>
+                <span className="italic">to Your Desk</span>
               </h3>
               <p className="text-muted-foreground leading-[1.8] mb-5">
-                Every piece in our collection passes through our hands before
-                reaching yours. We visit workshops, meet makers, and learn the
-                stories behind each object. This personal connection ensures that
-                what we offer isn't just beautiful—it's honest.
+                We only stock brands we would use ourselves — BIC, Parker,
+                Faber-Castell, Moleskine, Rexel, Oxford and the local
+                favourites you already know. Every item is checked over the
+                counter before it leaves the shop.
               </p>
               <p className="text-muted-foreground leading-[1.8]">
-                We prioritize natural materials, traditional techniques, and
-                makers who share our values. Whether it's a hand-thrown ceramic
-                vessel or a solid oak table built to last generations, we believe
-                in objects that get better with time, not worse.
+                Whether you're kitting out a Grade 1 class, restocking a busy
+                office or picking up a single notebook, you'll get honest
+                advice, fair prices and stock you can rely on.
               </p>
             </motion.div>
           </div>
@@ -225,22 +225,22 @@ const About = () => {
           <div className="grid md:grid-cols-3 gap-16 md:gap-12 lg:gap-20">
             {[
               {
-                title: "Craftsmanship",
+                title: "Quality Brands",
                 number: "01",
                 description:
-                  "We champion the work of skilled hands—artisans who have honed their craft over years, creating objects with care and intention that machines cannot replicate.",
+                  "We stock the trusted names — BIC, Parker, Faber-Castell, Moleskine, Rexel and Oxford — alongside dependable local favourites. No knock-offs, no surprises.",
               },
               {
-                title: "Sustainability",
+                title: "Fair Pricing",
                 number: "02",
                 description:
-                  "We choose natural materials that age gracefully and makers who respect the environment. Quality over quantity means less waste and more meaning.",
+                  "From single pens to bulk school-lists and office orders, our prices are set to work for real Bulawayo budgets. Ask about our school and business rates.",
               },
               {
-                title: "Slow Living",
+                title: "Local Service",
                 number: "03",
                 description:
-                  "In a world of constant acceleration, we believe in the beauty of pause. Our objects invite moments of calm and presence in daily life.",
+                  "We're a Bulawayo shop, staffed by people who know the products. Pop into Shop R4 at Main Street Mall or call us — we're always happy to help.",
               },
             ].map((value, i) => (
               <motion.div
@@ -272,16 +272,16 @@ const About = () => {
         <div className="grid grid-cols-3 gap-2 md:gap-4 h-[35vh] md:h-[50vh]">
           {[
             {
-              src: "https://images.unsplash.com/photo-1565193566173-7a0ee3dbe261?w=800&q=80",
-              alt: "Handcrafted ceramics",
+              src: "https://images.unsplash.com/photo-1513364776144-60967b0f800f?w=800&q=80",
+              alt: "Colour pencils and art supplies",
             },
             {
-              src: "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=800&q=80",
-              alt: "Styled living space",
+              src: "https://images.unsplash.com/photo-1497215728101-856f4ea42174?w=800&q=80",
+              alt: "Tidy office desk with stationery",
             },
             {
-              src: "https://images.unsplash.com/photo-1584100936595-c0654b55a2e2?w=800&q=80",
-              alt: "Artisan textiles",
+              src: "https://images.unsplash.com/photo-1531346878377-a5be20888e57?w=800&q=80",
+              alt: "An open notebook",
             },
           ].map((img, i) => (
             <motion.div
@@ -306,7 +306,7 @@ const About = () => {
       <section className="py-28 md:py-40 relative overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1920&q=80"
+            src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=1920&q=80"
             alt=""
             className="w-full h-full object-cover"
           />
@@ -321,21 +321,21 @@ const About = () => {
             transition={{ duration: 0.8 }}
           >
             <p className="text-[11px] font-semibold tracking-[0.3em] uppercase text-white/50 mb-5">
-              Let's Connect
+              Visit or Call
             </p>
             <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl text-white mb-6 leading-tight">
-              Have a Question?
+              Come Say Hello
             </h2>
             <p className="text-white/60 mb-10 max-w-md mx-auto leading-relaxed">
-              We're always happy to discuss our pieces, our makers, or help you
-              find exactly what you're looking for.
+              Shop R4, Main Street Mall, between 14th and 15th Avenue on J. Nkomo
+              Street, Bulawayo. Or call us on +263 77 409 8174.
             </p>
             <Button
               asChild
               size="lg"
               className="rounded-none px-12 py-6 text-sm tracking-[0.15em] uppercase bg-white text-charcoal hover:bg-white/90"
             >
-              <a href="mailto:hello@maison.com">
+              <a href="mailto:stationerycitybyo@gmail.com">
                 Get in Touch
                 <ArrowRight className="ml-3 w-4 h-4" />
               </a>
