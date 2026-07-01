@@ -20,6 +20,9 @@ export interface Product {
   images: string[];
   featured?: boolean;
   new?: boolean;
+  stock: number;
+  salePrice?: number;
+  saleEndDate?: string;
 }
 
 export const collections: Collection[] = [
