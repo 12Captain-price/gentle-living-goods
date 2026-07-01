@@ -4,6 +4,7 @@ import { useRef } from "react";
 import { ArrowRight } from "lucide-react";
 import { Layout } from "@/components/Layout";
 import { Button } from "@/components/ui/button";
+import { Editable } from "@/lib/site-content";
 
 const About = () => {
   const heroRef = useRef<HTMLDivElement>(null);
@@ -32,18 +33,15 @@ const About = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.3, ease: [0.25, 0.46, 0.45, 0.94] }}
           >
-            <p className="text-[11px] font-semibold tracking-[0.3em] uppercase text-white/60 mb-5">
-              Our Story
-            </p>
+            <div className="text-[11px] font-semibold tracking-[0.3em] uppercase text-white/60 mb-5">
+              <Editable k="about.hero.eyebrow" defaultValue="Our Story" />
+            </div>
             <h1 className="font-serif text-5xl md:text-7xl lg:text-8xl text-white mb-6 leading-[0.9]">
-              Bulawayo's
-              <br />
-              <span className="italic font-normal">Stationery Home</span>
+              <Editable k="about.hero.headline" defaultValue="Bulawayo's Stationery Home" />
             </h1>
-            <p className="text-base md:text-lg text-white/70 max-w-lg leading-relaxed">
-              Trusted pens, notebooks and office essentials — stocked with care
-              at Shop R4, Main Street Mall.
-            </p>
+            <div className="text-base md:text-lg text-white/70 max-w-lg leading-relaxed">
+              <Editable k="about.hero.subtext" defaultValue="Trusted pens, notebooks and office essentials — stocked with care at Shop R4, Main Street Mall." />
+            </div>
           </motion.div>
         </div>
       </section>

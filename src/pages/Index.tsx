@@ -7,6 +7,7 @@ import { ProductCard } from "@/components/ProductCard";
 import { CollectionCard } from "@/components/CollectionCard";
 import { collections, getNewProducts, products } from "@/data/products";
 import { Button } from "@/components/ui/button";
+import { Editable, EditableImage } from "@/lib/site-content";
 
 const Index = () => {
   const newProducts = getNewProducts();
@@ -54,23 +55,19 @@ const Index = () => {
             transition={{ duration: 1, delay: 0.3, ease: [0.25, 0.46, 0.45, 0.94] as const }}
             className="max-w-3xl"
           >
-            <motion.p
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.8, delay: 0.6 }}
-              className="text-[11px] font-semibold tracking-[0.3em] uppercase text-white/70 mb-6"
-            >
-              Bulawayo · Est. Main Street Mall
-            </motion.p>
+            <div className="text-[11px] font-semibold tracking-[0.3em] uppercase text-white/70 mb-6">
+              <Editable k="home.hero.eyebrow" defaultValue="Bulawayo · Est. Main Street Mall" />
+            </div>
             <h1 className="font-serif text-5xl md:text-7xl lg:text-8xl xl:text-9xl text-white mb-8 leading-[0.9] tracking-tight">
-              Everything
+              <Editable k="home.hero.headline1" defaultValue="Everything" />
               <br />
-              <span className="italic font-normal">You Write With</span>
+              <span className="italic font-normal">
+                <Editable k="home.hero.headline2" defaultValue="You Write With" />
+              </span>
             </h1>
-            <p className="text-base md:text-lg text-white/80 mb-10 leading-relaxed max-w-lg">
-              Pens, notebooks, files, art supplies and school essentials —
-              carefully stocked for students, offices and creatives across Zimbabwe.
-            </p>
+            <div className="text-base md:text-lg text-white/80 mb-10 leading-relaxed max-w-lg">
+              <Editable k="home.hero.subtext" defaultValue="Pens, notebooks, files, art supplies and school essentials — carefully stocked for students, offices and creatives across Zimbabwe." />
+            </div>
             <div className="flex flex-col sm:flex-row gap-4">
               <Button
                 asChild

@@ -16,6 +16,7 @@ export default {
       fontFamily: {
         serif: ["var(--font-serif)", "Georgia", "serif"],
         sans: ["var(--font-sans)", "system-ui", "sans-serif"],
+        mono: ["var(--font-mono)", "ui-monospace", "monospace"],
       },
       colors: {
         border: "hsl(var(--border))",
@@ -59,6 +60,8 @@ export default {
         taupe: "hsl(var(--warm-taupe))",
         charcoal: "hsl(var(--charcoal))",
         linen: "hsl(var(--linen))",
+        navy: "hsl(var(--navy))",
+        gold: "hsl(var(--gold))",
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",
