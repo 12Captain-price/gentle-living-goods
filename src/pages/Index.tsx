@@ -47,7 +47,7 @@ const Index = () => {
   return (
     <Layout>
       {/* Hero Section — Full Viewport */}
-      <section ref={heroRef} className="relative h-[100svh] -mt-16 md:-mt-20 overflow-hidden">
+      <section ref={heroRef} className="relative h-[100svh] overflow-hidden">
         <motion.div className="absolute inset-0" style={{ y: heroImageY }}>
           <img
             src={heroImage}
@@ -58,7 +58,7 @@ const Index = () => {
         </motion.div>
 
         <motion.div
-          className="relative container-full h-full flex flex-col justify-end pb-20 md:pb-28 pt-16 md:pt-20"
+        className="relative container-full h-full flex flex-col justify-end pb-20 md:pb-28"
           style={{ opacity: heroOpacity }}
         >
           <motion.div
