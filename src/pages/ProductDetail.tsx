@@ -5,7 +5,8 @@ import { Heart, ChevronLeft, ChevronRight, ArrowRight, ShoppingBag } from "lucid
 import { Layout } from "@/components/Layout";
 import { ProductCard } from "@/components/ProductCard";
 import { QuantitySelector } from "@/components/QuantitySelector";
-import { getProductBySlug, getRelatedProducts, collections } from "@/data/products";
+import { getProductBySlug, getRelatedProducts, collections, fmtUsd, fmtZwl, stockStatus } from "@/data/products";
+import { useSettings } from "@/lib/admin-data";
 import { useWishlist } from "@/hooks/useWishlist";
 import { useCart } from "@/hooks/useCart";
 import { Button } from "@/components/ui/button";
@@ -20,6 +21,7 @@ const ProductDetail = () => {
   const { addItem: addToWishlist, removeItem: removeFromWishlist, isInWishlist } = useWishlist();
   const { addItem: addToCart } = useCart();
   const { toast } = useToast();
+  const { settings } = useSettings();
 
   if (!product) {
     return (
@@ -214,9 +216,21 @@ const ProductDetail = () => {
                 {product.name}
               </h1>
 
-              <p className="text-2xl font-serif text-foreground mb-8">
-                ${product.price.toLocaleString()}
-              </p>
+              {(() => {
+                const onSale = product.salePrice !== undefined && product.salePrice < product.price;
+                const price = onSale ? product.salePrice! : product.price;
+                const status = stockStatus(product.stock);
+                return (
+                  <div className="mb-8">
+                    <div className="flex items-baseline gap-3">
+                      <span className="font-mono text-2xl text-navy">{fmtUsd(price)}</span>
+                      {onSale && <span className="font-mono text-base text-muted-foreground line-through">{fmtUsd(product.price)}</span>}
+                    </div>
+                    <p className="font-mono text-xs text-muted-foreground mt-1">{fmtZwl(price, settings.usdToZwlRate)}</p>
+                    <p className={cn("text-xs mt-3", status.tone === "in" ? "text-green-700" : status.tone === "low" ? "text-amber-700" : "text-destructive")}>{status.label}</p>
+                  </div>
+                );
+              })()}
 
               <div className="w-12 h-px bg-border mb-8" />
 
