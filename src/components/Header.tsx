@@ -4,15 +4,6 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useWishlist } from "@/hooks/useWishlist";
 import { CartIcon } from "@/components/CartIcon";
-import { collections } from "@/data/products";
-import {
-  NavigationMenu,
-  NavigationMenuContent,
-  NavigationMenuItem,
-  NavigationMenuLink,
-  NavigationMenuList,
-  NavigationMenuTrigger,
-} from "@/components/ui/navigation-menu";
 import {
   Tooltip,
   TooltipContent,
@@ -45,61 +36,31 @@ export const Header = () => {
       <nav className="container-full">
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
-          <Link
-            to="/"
-            className="font-serif text-2xl md:text-3xl tracking-tight text-foreground hover:text-primary transition-colors duration-300"
-          >
-            Stationery City
+          <Link to="/" className="flex flex-col leading-none">
+            <span className="font-serif text-2xl md:text-3xl tracking-tight text-foreground hover:text-primary transition-colors duration-300">
+              Stationery City
+            </span>
+            <span className="font-mono text-[10px] tracking-[0.3em] uppercase text-muted-foreground mt-1">
+              Bulawayo · ZW
+            </span>
           </Link>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-8">
-            <NavigationMenu>
-              <NavigationMenuList>
-                <NavigationMenuItem>
-                  <NavigationMenuTrigger className="bg-transparent text-xs font-medium tracking-[0.15em] uppercase text-muted-foreground hover:text-foreground">
-                    Collections
-                  </NavigationMenuTrigger>
-                  <NavigationMenuContent>
-                    <ul className="grid w-[400px] gap-1 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
-                      {collections.map((collection) => (
-                        <li key={collection.id}>
-                          <NavigationMenuLink asChild>
-                            <Link
-                              to={`/products?collection=${collection.slug}`}
-                              className={cn(
-                                "block select-none space-y-1 rounded-sm p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
-                              )}
-                            >
-                              <div className="text-sm font-medium leading-none">
-                                {collection.name}
-                              </div>
-                              <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
-                                {collection.description}
-                              </p>
-                            </Link>
-                          </NavigationMenuLink>
-                        </li>
-                      ))}
-                    </ul>
-                  </NavigationMenuContent>
-                </NavigationMenuItem>
-              </NavigationMenuList>
-            </NavigationMenu>
-
-            <Link
-              to="/products"
-              className="text-xs font-medium tracking-[0.15em] uppercase text-muted-foreground hover:text-foreground transition-colors duration-300 link-underline"
-            >
-              Shop All
-            </Link>
-
-            <Link
-              to="/about"
-              className="text-xs font-medium tracking-[0.15em] uppercase text-muted-foreground hover:text-foreground transition-colors duration-300 link-underline"
-            >
-              About
-            </Link>
+            {[
+              { to: "/", label: "Home" },
+              { to: "/products", label: "Shop" },
+              { to: "/about", label: "About" },
+              { to: "/cart", label: "Cart" },
+            ].map((l) => (
+              <Link
+                key={l.to}
+                to={l.to}
+                className="text-xs font-medium tracking-[0.15em] uppercase text-muted-foreground hover:text-foreground transition-colors duration-300 link-underline"
+              >
+                {l.label}
+              </Link>
+            ))}
           </div>
 
           {/* Right side actions */}
@@ -191,37 +152,17 @@ export const Header = () => {
             >
               <div className="py-8 space-y-6">
                 <div className="space-y-1">
-                  <p className="text-[10px] font-semibold tracking-[0.3em] uppercase text-muted-foreground/50 px-2 mb-3">
-                    Collections
-                  </p>
-                  {collections.slice(0, 6).map((collection, i) => (
-                    <motion.div
-                      key={collection.id}
-                      initial={{ opacity: 0, x: -10 }}
-                      animate={{ opacity: 1, x: 0 }}
-                      transition={{ delay: i * 0.05 }}
-                    >
-                      <Link
-                        to={`/products?collection=${collection.slug}`}
-                        className="block px-2 py-2.5 text-sm hover:bg-accent transition-colors duration-300"
-                        onClick={() => setMobileMenuOpen(false)}
-                      >
-                        {collection.name}
-                      </Link>
-                    </motion.div>
-                  ))}
-                </div>
-                <div className="pt-6 border-t border-border space-y-1">
                   {[
-                    { to: "/products", label: "Shop All" },
+                    { to: "/", label: "Home" },
+                    { to: "/products", label: "Shop" },
                     { to: "/about", label: "About" },
-                    { to: "/cart", label: "Shopping Bag" },
+                    { to: "/cart", label: "Cart" },
                   ].map((link, i) => (
                     <motion.div
                       key={link.to}
                       initial={{ opacity: 0, x: -10 }}
                       animate={{ opacity: 1, x: 0 }}
-                      transition={{ delay: 0.3 + i * 0.05 }}
+                      transition={{ delay: i * 0.05 }}
                     >
                       <Link
                         to={link.to}
