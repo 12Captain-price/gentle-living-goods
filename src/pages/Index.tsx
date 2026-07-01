@@ -12,7 +12,7 @@ const Index = () => {
   const newProducts = getNewProducts();
   const latestProducts = products.slice(0, 4);
   const displayedCollections = collections.slice(0, 6);
-  const featuredCollection = collections[0]; // Lighting
+  const featuredCollection = collections[0]; // Pens & Writing
   const heroRef = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
     target: heroRef,
@@ -23,12 +23,12 @@ const Index = () => {
 
   // Instagram placeholder images
   const instagramImages = [
-    "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=400&q=80",
-    "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=400&q=80",
-    "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=400&q=80",
-    "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=400&q=80",
-    "https://images.unsplash.com/photo-1565193566173-7a0ee3dbe261?w=400&q=80",
-    "https://images.unsplash.com/photo-1578500494198-246f612d3b3d?w=400&q=80",
+    "https://images.unsplash.com/photo-1583485088034-697b5bc36b92?w=400&q=80",
+    "https://images.unsplash.com/photo-1531346878377-a5be20888e57?w=400&q=80",
+    "https://images.unsplash.com/photo-1513364776144-60967b0f800f?w=400&q=80",
+    "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=400&q=80",
+    "https://images.unsplash.com/photo-1497215728101-856f4ea42174?w=400&q=80",
+    "https://images.unsplash.com/photo-1586281380349-632531db7ed4?w=400&q=80",
   ];
 
   return (
@@ -37,8 +37,8 @@ const Index = () => {
       <section ref={heroRef} className="relative h-[100svh] -mt-16 md:-mt-20 overflow-hidden">
         <motion.div className="absolute inset-0" style={{ y: heroImageY }}>
           <img
-            src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=1920&q=80"
-            alt="Curated home lifestyle"
+            src="https://images.unsplash.com/photo-1455390582262-044cdead277a?w=1920&q=80"
+            alt="Pens, notebooks and stationery neatly arranged on a desk"
             className="w-full h-[120%] object-cover animate-ken-burns"
           />
           <div className="absolute inset-0 bg-gradient-to-b from-charcoal/30 via-charcoal/10 to-charcoal/50" />
@@ -60,16 +60,16 @@ const Index = () => {
               transition={{ duration: 0.8, delay: 0.6 }}
               className="text-[11px] font-semibold tracking-[0.3em] uppercase text-white/70 mb-6"
             >
-              Curated for Considered Living
+              Bulawayo · Est. Main Street Mall
             </motion.p>
             <h1 className="font-serif text-5xl md:text-7xl lg:text-8xl xl:text-9xl text-white mb-8 leading-[0.9] tracking-tight">
-              Objects of
+              Everything
               <br />
-              <span className="italic font-normal">Quiet Beauty</span>
+              <span className="italic font-normal">You Write With</span>
             </h1>
             <p className="text-base md:text-lg text-white/80 mb-10 leading-relaxed max-w-lg">
-              Handcrafted home goods and lifestyle pieces designed to bring
-              warmth and intention to everyday moments.
+              Pens, notebooks, files, art supplies and school essentials —
+              carefully stocked for students, offices and creatives across Zimbabwe.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Button
@@ -136,8 +136,8 @@ const Index = () => {
                 {featuredCollection.name}
               </h2>
               <p className="text-muted-foreground leading-relaxed mb-8 max-w-md">
-                {featuredCollection.description}. Discover sculptural forms that cast warmth and shadow, 
-                designed to transform any space into a sanctuary of light.
+                {featuredCollection.description}. From the trusted BIC Cristal to the
+                iconic Parker Jotter — find a pen that suits the way you think, work and sign.
               </p>
               <Button
                 asChild
@@ -278,14 +278,14 @@ const Index = () => {
               About Us
             </p>
             <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl text-foreground leading-[1.3] mb-8">
-              We believe in the beauty of slow living—in objects made with care,
-              materials that age gracefully, and spaces that invite{" "}
-              <span className="italic">pause</span>.
+              For over a decade, Stationery City has kept Bulawayo's classrooms,
+              boardrooms and studios stocked — one honest pen, notebook and ream at a{" "}
+              <span className="italic">time</span>.
             </h2>
             <p className="text-muted-foreground leading-relaxed max-w-2xl mx-auto mb-10">
-              Every piece in our collection is selected for its material integrity, 
-              its maker's story, and its ability to endure beautifully. We work with 
-              artisans who share our commitment to craft and sustainability.
+              Walk into our shop at R4 Main Street Mall, or shop online — we stock the
+              trusted brands you know at prices that make sense for schools, small
+              businesses and everyday shoppers.
             </p>
             <Button
               asChild
@@ -316,10 +316,10 @@ const Index = () => {
               Follow Us
             </p>
             <h2 className="font-serif text-3xl md:text-4xl text-foreground mb-4">
-              @maisonhome
+              @stationerycitybyo
             </h2>
             <p className="text-muted-foreground max-w-md mx-auto">
-              Join our community and get inspired by curated spaces and behind-the-scenes moments.
+              Follow us for new stock, back-to-school deals and behind-the-counter moments from Bulawayo.
             </p>
           </motion.div>
 

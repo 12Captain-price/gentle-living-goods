@@ -49,7 +49,7 @@ export const Header = () => {
             to="/"
             className="font-serif text-2xl md:text-3xl tracking-tight text-foreground hover:text-primary transition-colors duration-300"
           >
-            Maison
+            Stationery City
           </Link>
 
           {/* Desktop Navigation */}
