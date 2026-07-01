@@ -83,7 +83,7 @@ export function useQuotations() {
       }
       const newQ: Quotation = {
         ...q, id: crypto.randomUUID(),
-        quoteNumber: nextNumber("Q-", quotations),
+        quoteNumber: nextNumber("Q-", quotations as unknown as Array<Record<string, unknown>>),
         createdAt: new Date().toISOString(),
       };
       set([newQ, ...quotations]);
@@ -104,7 +104,7 @@ export function useInvoices() {
       }
       const newI: Invoice = {
         ...i, id: crypto.randomUUID(),
-        invoiceNumber: nextNumber("INV-", invoices),
+        invoiceNumber: nextNumber("INV-", invoices as unknown as Array<Record<string, unknown>>),
         createdAt: new Date().toISOString(),
       };
       set([newI, ...invoices]);
