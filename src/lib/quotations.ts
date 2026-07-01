@@ -61,11 +61,12 @@ function useStore<T>(key: string, fallback: T): [T, (v: T | ((p: T) => T)) => vo
   return [value, set];
 }
 
-function nextNumber(prefix: string, list: { [k: string]: string }[]): string {
+function nextNumber(prefix: string, list: Array<Record<string, unknown>>): string {
   const key = prefix === "Q-" ? "quoteNumber" : "invoiceNumber";
   let max = 0;
   for (const item of list) {
-    const m = (item[key] || "").match(/(\d+)/);
+    const raw = String(item[key] ?? "");
+    const m = raw.match(/(\d+)/);
     if (m) max = Math.max(max, parseInt(m[1], 10));
   }
   return `${prefix}${String(max + 1).padStart(4, "0")}`;
